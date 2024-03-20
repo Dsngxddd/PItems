@@ -1,0 +1,27 @@
+items:
+  YokedenKilic:
+    name: YokedenKilic
+    material: DIAMOND_SWORD
+    custommodeldata: 123
+    maxLevel: 5
+    levels:
+      1:
+        cost: 100
+        damage: 5
+        description: Yokeden Kılıç - Seviye 1
+      2:
+        cost: 150
+        damage: 7
+        description: Yokeden Kılıç - Seviye 2
+      3:
+        cost: 200
+        damage: 9
+        description: Yokeden Kılıç - Seviye 3
+      4:
+        cost: 250
+        damage: 11
+        description: Yokeden Kılıç - Seviye 4
+      5:
+        cost: 300
+        damage: 13
+        description: Yokeden Kılıç - Seviye 5
