@@ -32,8 +32,8 @@ public class PItems extends JavaPlugin implements Listener {
             getServer().getPluginManager().disablePlugin(this);
             return;
         }
-        saveDefaultConfig(); // Eğer config dosyası yoksa varsayılanını oluşturur
-        reloadConfig(); // Config dosyasını yükler
+        saveDefaultConfig(); 
+        reloadConfig();
         getLogger().info("Plugin etkinleştirildi!");
         getServer().getPluginManager().registerEvents(this, this);
     }
@@ -100,11 +100,11 @@ public class PItems extends JavaPlugin implements Listener {
     }
 
     private void upgradeItem(Player player) {
-        ItemStack item = player.getInventory().getItemInMainHand(); // Ana eldeki itemi al
+        ItemStack item = player.getInventory().getItemInMainHand();
         if (item != null && item.getType() != Material.AIR) {
             ItemMeta meta = item.getItemMeta();
             if (meta != null) {
-                String itemName = ChatColor.stripColor(meta.getDisplayName()); // Renk kodlarını kaldır
+                String itemName = ChatColor.stripColor(meta.getDisplayName()); 
                 ConfigurationSection itemSection = getConfig().getConfigurationSection("items." + itemName.toLowerCase().replace(" ", ""));
                 if (itemSection != null) {
                     int currentLevel = getCurrentLevelFromLore(meta.getLore()); // Mevcut seviyeyi al
